@@ -1,5 +1,4 @@
-
-matplotlib.pyplot
+matplotlib
 cv2
 sklearn
 collections
