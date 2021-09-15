@@ -1,3 +1,4 @@
+
 from PIL import Image
 import cv2
 import matplotlib.pyplot as plt
@@ -10,14 +11,25 @@ st.title('Streamlit web app')
 
 st.subheader("""
 Explore. Classifiers and Datasets.
-KNN Classifier
+KNN Classifier \n
+K-Nearest Neighbors is one of the most basic yet essential classification algorithms in Machine Learning. 
+It belongs to the supervised learning domain and finds intense application in pattern recognition, data mining
+and intrusion detection.\n
+Intuition \n
+If we plot some points on a graph, we may be able to locate some clusters or groups. Now, given an 
+unclassified point, we can assign it to a group by observing what group its nearest neighbors belong to. 
+This means a point close to a cluster of points classified as, say ‘Red’ has a higher probability of getting 
+classified as ‘Red’.\n
 Find out the composition of an image.
 """)
+st.write("-------------------------------------------------- ")
+
 selected_box = st.sidebar.selectbox(
     'Choose an image',
     ('1','2','3','4','5')
     )
 x = st.sidebar.slider('Number of colors',min_value = 3,max_value = 10)
+
 
 if selected_box == '1':
     path = '01.jpg'
@@ -29,6 +41,8 @@ if selected_box == '4':
     path = '04.jpg'
 if selected_box == '5':
     path = '05.jpg'
+
+
 
 st.image(path,width=300)
 
@@ -55,6 +69,7 @@ ordered_colors = [center_colors[i] for i in counts.keys()]
 rgb_colors = [ordered_colors[i] for i in counts.keys()]
 hex_colors = [RGB2HEX(ordered_colors[i]) for i in counts.keys()]
 st.write(" ")
+st.write("-------------------------------------------------- ")
 st.write("COLOR COMPOSITIONS")
 #st.write("1. ordered colors:{}".format(ordered_colors))
 st.write(" hex colors    :{}".format(hex_colors))
