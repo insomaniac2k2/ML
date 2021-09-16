@@ -22,6 +22,7 @@ This means a point close to a cluster of points classified as, say ‘Red’ has
 classified as ‘Red’.\n
 Find out the composition of an image.
 """)
+st.write("read more here:[link](https://www.geeksforgeeks.org/k-nearest-neighbours/) ")
 st.write("-------------------------------------------------- ")
 
 selected_box = st.sidebar.selectbox(
