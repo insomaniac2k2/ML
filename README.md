@@ -6,3 +6,4 @@ collection of various data science projects
 3. salary prediction - completed
 4. unemployement data analysis - haven't started
 5. vehicle data analysis - haven't started
+6. news seggregation
